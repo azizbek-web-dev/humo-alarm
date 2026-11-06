@@ -1,0 +1,40 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    namespace 'uz.humo.alarm'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "uz.humo.alarm"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            // Release APK debug kalit bilan imzolanadi - foydalanuvchi to'g'ridan-to'g'ri o'rnata oladi
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+    // Ataylab hech qanday kutubxona yo'q - faqat Android framework API (APK kichik bo'lishi uchun)
+}

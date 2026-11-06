@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏰ HUMO budilnik"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#111111" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Telegram'da karta tushumi haqida xabar kelishi bilan baland budilnik chalinadi — pul kreditga yechilib ketishidan oldin ogoh bo'lasiz."
+            android:textSize="14sp"
+            android:textColor="#444444" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="15sp"
+            android:textColor="#111111" />
+
+        <Button
+            android:id="@+id/listenerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Bildirishnoma ruxsatini ochish" />
+
+        <TextView
+            android:id="@+id/fsiText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textSize="14sp"
+            android:textColor="#111111" />
+
+        <Button
+            android:id="@+id/fsiButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="To'liq ekran ruxsati (Android 14+)" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Karta oxiri (masalan 5131):"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#111111" />
+
+        <EditText
+            android:id="@+id/suffixInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="5131"
+            android:inputType="text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Tushum kalit so'zlari (har biri yangi qatorda):"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#111111" />
+
+        <EditText
+            android:id="@+id/incomeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Chiqim kalit so'zlari (bular bo'lsa — «+» summasi ham chalınmaydi):"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#111111" />
+
+        <EditText
+            android:id="@+id/expenseInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Saqlash" />
+
+        <Button
+            android:id="@+id/testButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:text="🔔 SINOV — budilnikni chalib ko'rish"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Eslatma: budilnik telefonning «Budilnik» ovoz kanali (STREAM_ALARM) orqali chalinadi — ovozsiz/DND rejimda ham eshitiladi. Budilnik ovozi balandligini telefon sozlamalarida ham tekshirib qo'ying. Batareyani tejash rejimi ilovani o'chirib qo'ymasligi uchun ilovani «cheklovsiz» rejimga qo'yish tavsiya etiladi."
+            android:textSize="13sp"
+            android:textColor="#666666" />
+
+    </LinearLayout>
+</ScrollView>
