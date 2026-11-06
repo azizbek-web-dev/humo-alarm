@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Ilova Telegramga bevosita (MTProto/TDLib) ulanadi - internet kerak -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,6 +16,7 @@
     <application
         android:allowBackup="true"
         android:label="HUMO budilnik"
+        tools:replace="android:label"
         android:icon="@android:drawable/ic_lock_idle_alarm"
         android:theme="@android:style/Theme.Material.Light.NoActionBar">
 
