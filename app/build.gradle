@@ -11,8 +11,21 @@ android {
         applicationId "uz.humo.alarm"
         minSdk 26
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.0"
+
+        // Telegram API ma'lumotlari build paytida muhitdan (CI secret) keladi - repoda saqlanmaydi
+        buildConfigField "int", "TG_API_ID", (System.getenv("TG_API_ID") ?: "0")
+        buildConfigField "String", "TG_API_HASH", "\"" + (System.getenv("TG_API_HASH") ?: "") + "\""
+
+        // Telefonlar uchun faqat ARM ABI lar (APK kichikroq bo'ladi)
+        ndk {
+            abiFilters 'arm64-v8a', 'armeabi-v7a'
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
     }
 
     buildTypes {
@@ -36,5 +49,6 @@ android {
 }
 
 dependencies {
-    // Ataylab hech qanday kutubxona yo'q - faqat Android framework API (APK kichik bo'lishi uchun)
+    // TDLib (Telegram MTProto klienti) - tayyor AAR, JitPack orqali (tdlibx/td, TDLib 1.8.56)
+    implementation 'com.github.tdlibx:td:1.8.56'
 }

@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="Telegram'da karta tushumi haqida xabar kelishi bilan baland budilnik chalinadi — pul kreditga yechilib ketishidan oldin ogoh bo'lasiz."
+            android:text="Ilova Telegramga bevosita ulanib, @HUMOcardbot chatini real vaqtda kuzatadi. Kartangizga pul tushishi bilan baland budilnik chalinadi — pul kreditga yechilib ketishidan oldin ogoh bo'lasiz."
             android:textSize="14sp"
             android:textColor="#444444" />
 
@@ -31,21 +31,129 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textSize="15sp"
+            android:textSize="16sp"
+            android:textStyle="bold"
             android:textColor="#111111" />
 
-        <Button
-            android:id="@+id/listenerButton"
+        <TextView
+            android:id="@+id/accountText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Bildirishnoma ruxsatini ochish" />
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            android:textColor="#2E7D32"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="1-qadam: Telegram raqamingiz"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#111111" />
+
+        <EditText
+            android:id="@+id/phoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="+998935493969"
+            android:inputType="phone"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/sendCodeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Kod yuborish" />
+
+        <EditText
+            android:id="@+id/codeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Telegramdan kelgan kod"
+            android:inputType="number"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/confirmCodeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Kodni tasdiqlash"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Ikki bosqichli (2FA) parol"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/confirmPasswordButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Parolni yuborish"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/startWatchButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="▶ Kuzatuvni boshlash (qayta ulash)" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Telegramdan chiqish (logout)" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="2-qadam: karta oxiri"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#111111" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filtr: xabarda «To'ldirish» + «➕» + «*karta» bo'lsa budilnik chalinadi. «To'lov»/«➖» hech qachon chalinmaydi."
+            android:textSize="13sp"
+            android:textColor="#666666" />
+
+        <EditText
+            android:id="@+id/suffixInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="5131"
+            android:inputType="text"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/saveSuffixButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Saqlash" />
 
         <TextView
             android:id="@+id/fsiText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="18dp"
             android:textSize="14sp"
             android:textColor="#111111" />
 
@@ -56,71 +164,11 @@
             android:layout_marginTop="6dp"
             android:text="To'liq ekran ruxsati (Android 14+)" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
-            android:text="Karta oxiri (masalan 5131):"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="#111111" />
-
-        <EditText
-            android:id="@+id/suffixInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="5131"
-            android:inputType="text"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Tushum kalit so'zlari (har biri yangi qatorda):"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="#111111" />
-
-        <EditText
-            android:id="@+id/incomeInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="top"
-            android:inputType="textMultiLine"
-            android:minLines="4"
-            android:textSize="15sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Chiqim kalit so'zlari (bular bo'lsa — «+» summasi ham chalınmaydi):"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="#111111" />
-
-        <EditText
-            android:id="@+id/expenseInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="top"
-            android:inputType="textMultiLine"
-            android:minLines="4"
-            android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/saveButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:text="Saqlash" />
-
         <Button
             android:id="@+id/testButton"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:text="🔔 SINOV — budilnikni chalib ko'rish"
             android:textSize="16sp" />
 
@@ -128,7 +176,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:text="Eslatma: budilnik telefonning «Budilnik» ovoz kanali (STREAM_ALARM) orqali chalinadi — ovozsiz/DND rejimda ham eshitiladi. Budilnik ovozi balandligini telefon sozlamalarida ham tekshirib qo'ying. Batareyani tejash rejimi ilovani o'chirib qo'ymasligi uchun ilovani «cheklovsiz» rejimga qo'yish tavsiya etiladi."
+            android:text="Eslatma: kirish bir marta qilinadi, sessiya telefonda saqlanadi. Kuzatuv foreground xizmatda ishlaydi — batareya tejash rejimi o'chirib qo'ymasligi uchun ilovani «cheklovsiz» rejimga qo'ying. Budilnik STREAM_ALARM kanali orqali chalinadi (ovozsiz/DND da ham eshitiladi)."
             android:textSize="13sp"
             android:textColor="#666666" />
 
