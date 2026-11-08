@@ -21,10 +21,15 @@ kechikishi mumkin, ilova esa xabarni to'g'ridan-to'g'ri Telegramdan oladi.)
    - `*<karta oxiri>` (standart `*5131`, sozlamada o'zgaradi)
    bo'lsa — **budilnik**. `To'lov` / `➖` / `💸` — hech qachon chalinmaydi.
    Misol (kirim): `🎉 To'ldirish | ➕ 3.400.000,00 UZS | 📍 … | 💳 HUMOCARD *5131 | 🕓 … | 💰 …`
-4. Budilnik `STREAM_ALARM` oqimida **maksimal ovozda**, loop rejimida chalinadi
-   (ovozsiz / bezovta qilmaslik rejimida ham eshitiladi), vibratsiya beradi va
-   qulflangan ekranda ham to'liq ekranli qizil oyna ochiladi. Katta
-   **TO'XTATISH** tugmasi bosilgandagina to'xtaydi.
+4. Budilnik ovozi xabar kelgan **zahoti** chalinadi — `AlarmPlayer` uni
+   foreground xizmatdan to'g'ridan-to'g'ri chaladi, oyna ochilishini yoki
+   bildirishnoma bosilishini kutmaydi (v2.0 dagi kamchilik tuzatildi).
+   - Telefon **oddiy rejimda** bo'lsa: `STREAM_ALARM` oqimida maksimal ovozda,
+     loop rejimida + vibratsiya.
+   - Telefon **ovozsiz yoki vibratsiya rejimida** bo'lsa: ovoz chalinmaydi,
+     faqat **kuchli vibratsiya** (to'liq quvvatda, loop) beriladi.
+   To'xtatish: budilnik oynasidagi katta **TO'XTATISH** tugmasi yoki
+   bildirishnomadagi **TO'XTATISH** tugmasi.
 
 ## O'rnatish va ruxsatlar
 

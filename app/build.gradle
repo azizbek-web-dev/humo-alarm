@@ -11,8 +11,8 @@ android {
         applicationId "uz.humo.alarm"
         minSdk 26
         targetSdk 34
-        versionCode 2
-        versionName "2.0"
+        versionCode 3
+        versionName "2.1"
 
         // Telegram API ma'lumotlari build paytida muhitdan (CI secret) keladi - repoda saqlanmaydi
         buildConfigField "int", "TG_API_ID", (System.getenv("TG_API_ID") ?: "0")
